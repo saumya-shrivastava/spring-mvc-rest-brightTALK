@@ -1,0 +1,48 @@
+Sample REquest and Response:
+
+1) Request Type: GET
+	Request: http://localhost:8080/brighttalk-mvc-realm/realms/t
+	Headers: Accept - application/json
+	Response :
+		{
+    "code": "InvalidArgument"
+}
+
+
+2) Request Type: GET
+	Request: http://localhost:8080/brighttalk-mvc-realm/realms/1
+	Headers: Accept - application/xml
+
+	Response: 
+		<Realm xmlns="">
+    <id>1</id>
+    <name>name1</name>
+    <description>desc1</description>
+    <key>key1</key>
+</Realm>
+
+
+3) Request Type: POST
+	Request: http://localhost:8080/brighttalk-mvc-realm/realms/
+	Body: <Realm >
+    <name>name-1</name>
+    <description>desc1</description>
+    <key>key1</key>
+</Realm>
+	Headers: Accept - application/xml
+		 Content - application/xml
+
+	Response: <Realm xmlns="">
+    <id>6</id>
+    <name>name-1</name>
+    <description>desc1</description>
+    <key>key1</key>
+</Realm>
+
+	REspnse Header: content-type ?application/xml;charset=UTF-8
+	date ?Mon, 27 May 2019 12:56:13 GMT
+	location ?http://localhost:8080/brighttalk-mvc-realm/realms/6
+	transfer-encoding ?chunked
+	
+	Status: 201 Created
+	
