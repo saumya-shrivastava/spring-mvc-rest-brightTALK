@@ -1,0 +1,11 @@
+The DBSchema :
+CREATE DATABASE `brighttalk_schema` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+
+
+CREATE TABLE `user_realm` (
+  `realm_id` int(11) NOT NULL AUTO_INCREMENT,
+  `realm_name` varchar(45) NOT NULL,
+  `realm_key` varchar(45) DEFAULT NULL,
+  `realm_description` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`realm_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
