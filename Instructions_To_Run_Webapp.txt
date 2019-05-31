@@ -18,7 +18,7 @@
 
 6)To deploy the war file, place the brighttalk-mvc-realm.war file in Tomcat webapps folder and then start the Tomcat server.
 
-7) Please send the request as follows: 
+7) Once the Tomcat server starts completely,Please send the request as follows: 
 	Request Type: POST
 	Request: http://localhost:8080/brighttalk-mvc-realm/realms/
 	
