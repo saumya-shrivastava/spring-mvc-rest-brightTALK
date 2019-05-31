@@ -42,7 +42,4 @@
 		{
     "code": "InvalidArgument"
 }
-
-
-
 (NOTE: Please note the URL for accessing the webapplication is different form the one given  in the skills test PDF)
