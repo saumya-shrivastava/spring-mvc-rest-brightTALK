@@ -1,0 +1,48 @@
+======Instructions file======
+
+1) create DB Schema brighttalk_schema and table user_realm in MYSQL server as per Create statements in the file DBSchema.txt and start the MYSQL server.
+
+2)change the username and password for your MYSQL server in db.properties(Path: brighttalk-mvc-realm\src\main\resources\db.properties)
+	For this application it is as follows: 	mysql.url=jdbc:mysql://localhost:3306/brighttalk_schema
+
+						mysql.user=root
+
+						mysql.password=passw0rd
+(In case the MySQL url,passowrd and username is same as above then you can directly go to step 6)
+
+3) DO mvn clean and mvn install on the project :brighttalk-mvc-realm > mvn clean , brighttalk-mvc-realm > mvn install
+
+4) The war file is created in brighttalk-mvc-realm\target as brighttalk-mvc-realm-0.0.1-SNAPSHOT.war
+
+5) Rename the war file to brighttalk-mvc-realm.war
+
+6)To deploy the war file, place the brighttalk-mvc-realm.war file in Tomcat webapps folder and then start the Tomcat server.
+
+7) Please send the request as follows: 
+	Request Type: POST
+	Request: http://localhost:8080/brighttalk-mvc-realm/realms/
+	
+	Body: <Realm >
+    <name>name-1</name>
+    <description>desc1</description>
+    <key>key1</key>
+</Realm>
+	
+	Headers: Accept - application/xml
+		 Content - application/xml
+
+	
+
+	Request Type: GET
+	Request: http://localhost:8080/brighttalk-mvc-realm/realms/t
+	
+	Headers: Accept - application/json
+	
+	Response :
+		{
+    "code": "InvalidArgument"
+}
+
+
+
+(NOTE: Please note the URL for accessing the webapplication is different form the one given  in the skills test PDF)
